@@ -1,14 +1,3 @@
-
-const arrayPerson=[];
-const arrayVerb=[];
-const arrayObject=['the universe', 'the ocean', 'pollution', 'clouds', 'to go vegan', 'in the air', 'you', 'everyone', 'bees', 'Nashville, TN'];
-
-const randomPerson:'';
-const randomVerb:'';
-const randomObject = () => {
-    return arrayObject[Math.floor(Math.random()*9)];
-}
-
 const arrayPerson=[
     {
         name:'The universe',
@@ -51,35 +40,40 @@ const arrayPerson=[
         type:'singular without s',
     },
 ];
-const arrayVerb=['run','eat','walk on','sleep',"practice","call","laugh","cry","digest ","overrate"];
-const arrayObject=['pancakes'];
+const arrayVerb=['run','eat','walk','sleep',"practice","call","laugh","jump","digest ","overrate"];
+const arrayObject=['the universe', 'the ocean', 'pollution', 'clouds', 'to go vegan', 'in the air', 'you', 'everyone', 'bees', 'Nashville, TN'];
 
 const randomPersonIndex = Math.floor((Math.random()*9));
 const randomPerson = arrayPerson[randomPersonIndex].name;
 const personType = arrayPerson[randomPersonIndex].type;
 
 
-
-console.log(randomPerson);
-
 const randomVerb=arrayVerb[Math.floor(Math.random()*9)];
-const randomObject='pancakes';
+const randomObject = () => {
+    return arrayObject[Math.floor(Math.random()*9)];
+};
 
+const object = randomObject();
 
-/* function mix () {
-    
+function mix () {
+    if(personType==='singular with s'){
+        if(randomVerb==='walk' || randomVerb==='jump'){
+        document.write(`${randomPerson} ${randomVerb}s on ${object}`);
+        }
+        else{
+            return (`${randomPerson} ${randomVerb}s ${object}`);
+        }
+    }
+    else{
 
-} */
+         if(randomVerb==='walk' || randomVerb==='jump'){
 
-
-
-
-
-
-console.log(randomObject());
-
-   console.log(`${randomPerson} ${randomVerb} ${randomObject}`);
-
+            return (`${randomPerson} ${randomVerb} on ${object}`);
+        }
+        else{
+            return (`${randomPerson} ${randomVerb} ${object}`);
+        }
+    }
 }
 
-mix();
+document.write(mix());
