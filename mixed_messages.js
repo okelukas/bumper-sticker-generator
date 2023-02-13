@@ -56,7 +56,7 @@ const verbs = [
     "call",
     "laugh",
     "jump",
-    "digest ",
+    "digest",
     "overrate",
 ];
 
