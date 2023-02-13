@@ -1,1 +1,1 @@
-// Hi Guys
+document.write("hello world");
